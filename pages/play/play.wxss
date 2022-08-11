@@ -1,0 +1,66 @@
+page{
+  height: 100%;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+}
+.bg{
+  width: 160%;
+  height: 100%;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.4;
+  z-index: -1;
+}
+.musicName{
+  text-align: center;
+  font-size: 50rpx;
+  line-height: 150rpx;
+  /* background-color: blue; */
+  color: white;
+}
+swiper{
+  /* background-color: pink; */
+  flex: 1;
+}
+swiper .imgbox{
+  display: flex;
+}
+swiper swiper-item image{
+  display: block;
+  width: 400rpx;
+  height: 400rpx;
+  border-radius: 50%;
+  border: 100rpx solid #313131;
+  box-shadow: 3rpx 3rpx 30rpx black;
+  margin: auto;
+  animation: imgplay 20s linear infinite;
+}
+@keyframes imgplay{
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+scroll-view {
+  height: 100%;
+  color: white;
+}
+scroll-view view{
+  color: rgb(184, 182, 182);
+  text-align: center;
+}
+.footer{
+  height: 200rpx;
+  /* background-color: skyblue; */
+  display: flex;
+}
+.footer .imgPlay{
+  width: 100rpx;
+  height: 100rpx;
+  margin: auto;
+}
+

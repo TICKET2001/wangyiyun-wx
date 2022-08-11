@@ -1,0 +1,26 @@
+<view class="imgShow">
+  <image mode="widthFix" src="{{singerDetail.data.data.artist.cover}}"></image>
+  <view class="txtBox">
+    <view class="name">{{singerDetail.data.data.artist.name}}</view>
+    <view class="txt">创造曲目：{{singerDetail.data.data.artist.musicSize}}</view>
+  </view>
+</view>
+
+<view class="title">歌手简介</view>
+<view class="content">
+{{singerDetail.data.data.artist.briefDesc}}
+</view>
+<view class="title">热门单曲</view>
+<view class="musicBox">
+  <block wx:for="{{hotMusicList.data.songs}}" wx:key="this" wx:for-index="in">
+    <view class="item">
+      <view class="txtBox">
+        <text class="mname">{{item.name}}</text>
+        <text class="nname">{{singerDetail.data.data.artist.name}}-{{item.al.name}}</text>
+      </view>
+      <view class="playimg" bindtap="playLink" data-index="{{in}}">
+        <image src="/image/bofan.png"></image>
+      </view>
+    </view>
+  </block>
+</view>

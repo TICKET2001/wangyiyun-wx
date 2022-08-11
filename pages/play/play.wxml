@@ -1,0 +1,19 @@
+<image class="bg" src="{{music.picUrl||music.al.picUrl}}"></image>
+<!--头部-->
+<view class="musicName">{{music.name}}</view>
+<!--轮播组件-->
+<swiper>
+  <swiper-item class="imgbox">
+    <image src="{{music.picUrl||music.al.picUrl}}"></image>
+  </swiper-item>
+  <swiper-item>
+    <!--滑动组件-->
+    <scroll-view scroll-y="true">
+      <view wx:for="{{lyrics}}" wx:key="this">{{item[1]}}</view>
+    </scroll-view>
+  </swiper-item>
+</swiper>
+<!--底部-->
+<view class="footer">
+  <image class="imgPlay" src="{{imgUrl}}" bindtap="play"></image>
+</view>
